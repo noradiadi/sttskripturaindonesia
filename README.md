@@ -1,1 +1,1 @@
-# sttskripturaindonesia
+https://noradiadi.github.io/sttskripturaindonesia/
