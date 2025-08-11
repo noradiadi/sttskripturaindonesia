@@ -20,7 +20,34 @@
     footer a { color: #ffc107; text-decoration: none; margin: 0 5px; }
     footer a:hover { color: white; }
     .navbar .dropdown:hover .dropdown-menu { display: block; margin-top: 0; }
-  </style>
+  
+/* Hero section */
+.hero {
+  background: linear-gradient(90deg, #0d6efd, #003366);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+/* Fade-in animation */
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.container p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+</style>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
@@ -74,11 +101,23 @@
     </div>
   </nav>
 
-  <div class="container py-5">
-    <h1>Sejarah</h1><p>Konten sejarah STT Skriptura Indonesia...</p>
-  </div>
+  
+<div class="hero bg-primary text-white text-center py-5">
+    <h1>Sejarah Singkat STT Skriptura Indonesia</h1>
+</div>
 
-  <footer class="text-white py-4">
+<div class="container py-5 fade-in">
+    <p>STT Skriptura Indonesia didirikan pada 11 Oktober 2006 oleh tiga hamba Tuhan Pdt. Dr. Maxie M. Rumagit, Mt.Th, Pdt. Meidy J. Rumagit, M.Th dan Pdt. Robertus Sela, M.Th. yang sejak awal berkomitmen untuk bukan saja menghasilkan pemimpin-pemimpin yang handal dari gereja dan lembaga kristiani lainnya, tetapi juga memberi wadah bagi setiap warga gereja yang ingin mempelajari Firman Tuhan secara mendalam dan komprehensif, demi partisipasinya yang lebih baik dan tepat guna dalam mendukung program-program ...
+    
+    <p>Selanjutnya para pendiri dengan tekad dan komitmen iman yang telah diambil mulai mensosialisasikan lembaga pendidikan ini kepada masyarakat Kristen yang ada di kota Depok dan sekitarnya. Hal ini dilakukan baik berupa penyebaran-penyebaran brosur maupun komunikasi-komunikasi langsung dengan pemimpin-pemimpin gereja dan lembaga pelayanan kristiani lainnya. Upaya ini membuahkan hasil yang nyata dengan dimulainya perkuliahan perdana pada bulan Oktober tahun 2006 yang diikuti oleh 16 mahasiswa, dengan ...
+    
+    <p>Perkuliahan di tempat ini berlangsung selama 2 tahun. Tempat perkuliahan ini terpisah dari kantor Sekretariat STT yang beralamat di Jl. Melati no 1C, Depok Lama. Kantor Sekretariat tersebut adalah sebuah bangunan berukuran 7×4 m, yang disewa selama 1 tahun. Hal ini terjadi karena awal pendirian lembaga ini memang tidak dimulai dengan ketersediaan fasilitas ataupun dana yang memadai. Lembaga ini dimulai dengan komitmen para pendirinya yang terpanggil untuk memperlengkapi umat Tuhan dengan firman Al...
+    
+    <p>Seiring dengan komitmen yang terus terpelihara dalam diri para pendiri, maka sekalipun perjalanan lembaga ini mengalami pasang surut dengan segala dinamika yang terjadi, perlahan namun pasti lembaga pendidikan ini terus mengalami kemajuan. Beberapa indikator yang terlihat pertama-tama dari jumlah mahasiswa yang terus bertambah, para dosen yang dilibatkan, demikian juga dengan fasilitas-fasilitas pendukung pendidikan lainnya yang terus mengalami kemajuan yang signifikan.</p>
+    
+    <p>Dalam anugerah Tuhan, maka pada tahun 2007, STT Skriptura telah menempati kantor sekretariat baru yang berlokasi di Jl. Siliwangi Dalam no 27, Kota Depok, dengan status kontrak hingga saat ini. Adapun masa kontrak yang telah diperpanjang tersebut akan berakhir pada Tahun 2016. Sementara itu, tempat perkuliahan yang tadinya dilaksanakan di rumah kediaman Ibu Rudjito, telah dipindahkan dan disatukan dengan kantor Sekretariat, setelah dibangun pada lokasi kantor yang terdiri dari 3 ruang kelas, 1 rua...
+</div>
+<footer class="text-white py-4">
     <div class="container text-center">
       <p class="mb-1">&copy; 2025 STT Skriptura Indonesia</p>
       <small><i class="fa-solid fa-location-dot"></i> Jl. Siliwangi Dalam No. 27, Depok Lama –  <i class="fa-solid fa-phone"></i> (021) 77202982 <i class="fa-solid fa-envelope"></i> stt.skripturadepok@gmail.com</small>
