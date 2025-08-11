@@ -20,7 +20,42 @@
     footer a { color: #ffc107; text-decoration: none; margin: 0 5px; }
     footer a:hover { color: white; }
     .navbar .dropdown:hover .dropdown-menu { display: block; margin-top: 0; }
-  </style>
+  
+/* Hero Section */
+.hero {
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* Card Styling */
+.card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Animation */
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Typography */
+.container h2 {
+  border-bottom: 3px solid #0d6efd;
+  display: inline-block;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+</style>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
@@ -74,11 +109,39 @@
     </div>
   </nav>
 
-  <div class="container py-5">
-    <h1>Visi & Misi</h1><h3>Visi</h3><p>...</p><h3>Misi</h3><p>...</p>
-  </div>
+  
+<div class="hero bg-primary text-white text-center py-5" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('hero-visi.jpg') center/cover;">
+    <h1 class="display-4 fw-bold">Visi & Misi</h1>
+    <p class="lead">Menjadi lembaga teologi unggul yang membentuk pemimpin rohani berintegritas</p>
+</div>
 
-  <footer class="text-white py-4">
+<div class="container py-5 fade-in">
+    <div class="row mb-4">
+        <div class="col-md-12 text-center">
+            <h2>Visi</h2>
+        </div>
+        <div class="col-md-8 offset-md-2">
+            <div class="card p-4">
+                <p>VISI ANDA DI SINI</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h2>Misi</h2>
+        </div>
+        <div class="col-md-8 offset-md-2">
+            <div class="card p-4">
+                <ul>
+                    <li>Misi 1</li>
+                    <li>Misi 2</li>
+                    <li>Misi 3</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="text-white py-4">
     <div class="container text-center">
       <p class="mb-1">&copy; 2025 STT Skriptura Indonesia</p>
       <small><i class="fa-solid fa-location-dot"></i> Jl. Siliwangi Dalam No. 27, Depok Lama –  <i class="fa-solid fa-phone"></i> (021) 77202982 <i class="fa-solid fa-envelope"></i> stt.skripturadepok@gmail.com</small>
