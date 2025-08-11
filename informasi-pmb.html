@@ -20,7 +20,44 @@
     footer a { color: #ffc107; text-decoration: none; margin: 0 5px; }
     footer a:hover { color: white; }
     .navbar .dropdown:hover .dropdown-menu { display: block; margin-top: 0; }
-  </style>
+  
+/* Hero section */
+.pmb-hero {
+  background: linear-gradient(90deg, #0d6efd, #003366);
+  color: white;
+  padding: 50px 20px;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.pmb-hero h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.pmb-hero p {
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+/* Card styling */
+.pmb-card {
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: all 0.3s ease-in-out;
+}
+.pmb-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+.pmb-card h3 {
+  color: #003366;
+  font-weight: bold;
+}
+
+</style>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
@@ -74,11 +111,33 @@
     </div>
   </nav>
 
-  <div class="container py-5">
-    <h1>Informasi PMB</h1><p>Detail informasi Penerimaan Mahasiswa Baru...</p>
+  
+<div class="container py-5">
+  <div class="pmb-hero">
+    <h1>Informasi Penerimaan Mahasiswa Baru</h1>
+    <p>Selamat datang di halaman informasi PMB STT Skriptura Indonesia. Temukan semua informasi penting untuk mendaftar.</p>
   </div>
-
-  <footer class="text-white py-4">
+  <div class="pmb-card">
+    <h3>Persyaratan Pendaftaran</h3>
+    <ul>
+      <li>Fotokopi Ijazah SMA/SMK atau sederajat</li>
+      <li>Pas Foto ukuran 3x4 (3 lembar)</li>
+      <li>Fotokopi KTP</li>
+      <li>Mengisi formulir pendaftaran</li>
+    </ul>
+    <h3 class="mt-4">Tahapan Pendaftaran</h3>
+    <ol>
+      <li>Mengisi formulir pendaftaran secara online atau offline</li>
+      <li>Melengkapi dokumen persyaratan</li>
+      <li>Mengikuti tes seleksi</li>
+      <li>Pengumuman hasil seleksi</li>
+    </ol>
+    <div class="text-center mt-4">
+      <a href="pendaftaran.html" class="btn btn-primary btn-lg">Daftar Sekarang</a>
+    </div>
+  </div>
+</div>
+<footer class="text-white py-4">
     <div class="container text-center">
       <p class="mb-1">&copy; 2025 STT Skriptura Indonesia</p>
       <small><i class="fa-solid fa-location-dot"></i> Jl. Siliwangi Dalam No. 27, Depok Lama – <i class="fa-solid fa-envelope"></i> stt.skripturadepok@gmail.com</small>
