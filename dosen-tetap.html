@@ -20,7 +20,52 @@
     footer a { color: #ffc107; text-decoration: none; margin: 0 5px; }
     footer a:hover { color: white; }
     .navbar .dropdown:hover .dropdown-menu { display: block; margin-top: 0; }
-  </style>
+  
+/* Hero Section */
+.hero {
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* Dosen Card Styling */
+.dosen-card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #fff;
+  padding: 20px;
+  text-align: center;
+}
+.dosen-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+.dosen-card img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+.dosen-card h5 {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.dosen-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Animation */
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+</style>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
@@ -74,11 +119,39 @@
     </div>
   </nav>
 
-  <div class="container py-5">
-    <h1>Dosen Tetap</h1><p>Daftar dosen tetap STT Skriptura Indonesia...</p>
-  </div>
+  
+<div class="hero bg-primary text-white text-center py-5" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('hero-dosen.jpg') center/cover;">
+    <h1 class="display-4 fw-bold">Dosen Tetap</h1>
+    <p class="lead">Para pengajar berpengalaman dan berdedikasi untuk pendidikan teologi berkualitas</p>
+</div>
 
-  <footer class="text-white py-4">
+<div class="container py-5 fade-in">
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="dosen-card">
+                <img src="dosen1.jpg" alt="Nama Dosen 1">
+                <h5>Nama Dosen 1</h5>
+                <p>Bidang Keahlian</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="dosen-card">
+                <img src="dosen2.jpg" alt="Nama Dosen 2">
+                <h5>Nama Dosen 2</h5>
+                <p>Bidang Keahlian</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="dosen-card">
+                <img src="dosen3.jpg" alt="Nama Dosen 3">
+                <h5>Nama Dosen 3</h5>
+                <p>Bidang Keahlian</p>
+            </div>
+        </div>
+        <!-- Tambahkan card sesuai kebutuhan -->
+    </div>
+</div>
+<footer class="text-white py-4">
     <div class="container text-center">
       <p class="mb-1">&copy; 2025 STT Skriptura Indonesia</p>
       <small><i class="fa-solid fa-location-dot"></i> Jl. Siliwangi Dalam No. 27, Depok Lama –  <i class="fa-solid fa-phone"></i> (021) 77202982 <i class="fa-solid fa-envelope"></i> stt.skripturadepok@gmail.com</small>
