@@ -20,7 +20,41 @@
     footer a { color: #ffc107; text-decoration: none; margin: 0 5px; }
     footer a:hover { color: white; }
     .navbar .dropdown:hover .dropdown-menu { display: block; margin-top: 0; }
-  </style>
+  
+/* Hero Section */
+.hero {
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* Card Styling */
+.org-card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #fff;
+  padding: 20px;
+  text-align: center;
+}
+.org-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+.org-card h5 {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+/* Animation */
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+</style>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
@@ -74,19 +108,39 @@
     </div>
   </nav>
 
-  <div class="container py-5">
-    <h1>Struktur Organisasi</h1>
-    <h4>Ketua</h4>
-    <p>Struktur organisasi STT Skriptura Indonesia...</p>
-    <h4>Wakil Ketua I</h4>
-    <p>Struktur organisasi STT Skriptura Indonesia...</p>
-    <h4>Wakil Ketua II</h4>
-    <p>Struktur organisasi STT Skriptura Indonesia...</p>
-    <h4>Wakil Ketua III</h4>
-    <p>Struktur organisasi STT Skriptura Indonesia...</p>
-  </div>
+  
+<div class="hero bg-primary text-white text-center py-5" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('hero-struktur.jpg') center/cover;">
+    <h1 class="display-4 fw-bold">Struktur Organisasi</h1>
+    <p class="lead">Membangun sinergi untuk pelayanan dan pendidikan yang unggul</p>
+</div>
 
-  <footer class="text-white py-4">
+<div class="container py-5 fade-in">
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="org-card">
+                <img src="leader1.jpg" alt="Ketua" class="img-fluid rounded-circle" style="width:120px;height:120px;object-fit:cover;">
+                <h5>Nama Ketua</h5>
+                <p>Jabatan</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="org-card">
+                <img src="leader2.jpg" alt="Wakil Ketua" class="img-fluid rounded-circle" style="width:120px;height:120px;object-fit:cover;">
+                <h5>Nama Wakil</h5>
+                <p>Jabatan</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="org-card">
+                <img src="leader3.jpg" alt="Sekretaris" class="img-fluid rounded-circle" style="width:120px;height:120px;object-fit:cover;">
+                <h5>Nama Sekretaris</h5>
+                <p>Jabatan</p>
+            </div>
+        </div>
+        <!-- Tambahkan card sesuai kebutuhan -->
+    </div>
+</div>
+<footer class="text-white py-4">
     <div class="container text-center">
       <p class="mb-1">&copy; 2025 STT Skriptura Indonesia</p>
       <small><i class="fa-solid fa-location-dot"></i> Jl. Siliwangi Dalam No. 27, Depok Lama –  <i class="fa-solid fa-phone"></i> (021) 77202982 <i class="fa-solid fa-envelope"></i> stt.skripturadepok@gmail.com</small>
