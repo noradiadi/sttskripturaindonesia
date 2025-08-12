@@ -20,6 +20,61 @@
     footer a { color: #ffc107; text-decoration: none; margin: 0 5px; }
     footer a:hover { color: white; }
     .navbar .dropdown:hover .dropdown-menu { display: block; margin-top: 0; }
+
+    /* Hero Section */
+    .hero {
+      background: url('s2-teologi.jpg') center/cover no-repeat;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.4);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    .hero h1 { font-size: 2.5rem; font-weight: bold; }
+    .hero p { font-size: 1.1rem; }
+
+    /* Title style */
+    .page-title {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #003366;
+      font-weight: bold;
+    }
+    .page-title::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 4px;
+      background-color: #ffc107;
+      margin: 0.5rem auto 0;
+      border-radius: 5px;
+    }
+
+    /* Card content */
+    .content-card {
+      background: white;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      animation: fadeIn 1s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
   </style>
 </head>
 <body>
@@ -74,14 +129,40 @@
     </div>
   </nav>
 
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1><i class="fa-solid fa-graduation-cap"></i> S2 Magister Teologi</h1>
+      <p>Mendalami Teologi untuk Membentuk Pemimpin Rohani yang Visioner dan Berdampak.</p>
+    </div>
+  </section>
+
+  <!-- Content -->
   <div class="container py-5">
-    <h1>S2 Magister Teologi</h1><p>Informasi program studi S2 Teologi...</p>
+    <h2 class="page-title">Tentang Program Studi</h2>
+    <div class="content-card">
+      <p>
+        Program Studi S2 Magister Teologi di STT Skriptura Indonesia bertujuan memperdalam pemahaman teologi
+        dan keterampilan kepemimpinan rohani mahasiswa untuk pelayanan yang lebih efektif di gereja, lembaga pendidikan, dan masyarakat.
+      </p>
+      <p>
+        Kurikulum dirancang untuk memberikan wawasan mendalam tentang teologi sistematika, biblika, sejarah gereja,
+        dan penelitian akademik tingkat lanjut.
+      </p>
+      <p>
+        <strong>Durasi Studi:</strong> 2 tahun (4 semester) <br>
+        <strong>Gelar yang Diperoleh:</strong> M.Th (Magister Teologi)
+      </p>
+    </div>
   </div>
 
+  <!-- Footer -->
   <footer class="text-white py-4">
     <div class="container text-center">
       <p class="mb-1">&copy; 2025 STT Skriptura Indonesia</p>
-      <small><i class="fa-solid fa-location-dot"></i> Jl. Siliwangi Dalam No. 27, Depok Lama –  <i class="fa-solid fa-phone"></i> (021) 77202982 <i class="fa-solid fa-envelope"></i> stt.skripturadepok@gmail.com</small>
+      <small><i class="fa-solid fa-location-dot"></i> Jl. Siliwangi Dalam No. 27, Depok Lama –
+        <i class="fa-solid fa-phone"></i> (021) 77202982
+        <i class="fa-solid fa-envelope"></i> stt.skripturadepok@gmail.com</small>
       <div class="mt-2">
         <a href="https://www.facebook.com/stt.skriptura/"><i class="fab fa-facebook"></i></a>
         <a href="https://www.instagram.com/sttskriptura/"><i class="fab fa-instagram"></i></a>
