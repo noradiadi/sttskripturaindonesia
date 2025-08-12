@@ -8,18 +8,104 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body { font-family: 'Roboto', sans-serif; background-color: #f8f9fa; }
-    .navbar { background: linear-gradient(90deg, #0d6efd, #003366); }
-    .navbar-brand { font-weight: bold; letter-spacing: 1px; }
-    .navbar-nav .nav-link { transition: 0.3s; }
-    .navbar-nav .nav-link:hover { color: #ffc107; }
-    .dropdown-menu { background-color: #003366; }
-    .dropdown-menu .dropdown-item { color: white; }
-    .dropdown-menu .dropdown-item:hover { background-color: #0d6efd; }
-    footer { background: linear-gradient(90deg, #003366, #000); }
-    footer a { color: #ffc107; text-decoration: none; margin: 0 5px; }
-    footer a:hover { color: white; }
-    .navbar .dropdown:hover .dropdown-menu { display: block; margin-top: 0; }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f8f9fa;
+    }
+    .navbar {
+      background: linear-gradient(90deg, #0d6efd, #003366);
+    }
+    .navbar-brand {
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    .navbar-nav .nav-link {
+      transition: 0.3s;
+    }
+    .navbar-nav .nav-link:hover {
+      color: #ffc107;
+    }
+    .dropdown-menu {
+      background-color: #003366;
+    }
+    .dropdown-menu .dropdown-item {
+      color: white;
+    }
+    .dropdown-menu .dropdown-item:hover {
+      background-color: #0d6efd;
+    }
+    footer {
+      background: linear-gradient(90deg, #003366, #000);
+    }
+    footer a {
+      color: #ffc107;
+      text-decoration: none;
+      margin: 0 5px;
+    }
+    footer a:hover {
+      color: white;
+    }
+    .navbar .dropdown:hover .dropdown-menu {
+      display: block;
+      margin-top: 0;
+    }
+    /* Hero Section */
+    .hero {
+      background: url('kampus.jpg') center/cover no-repeat;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.4);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+    .hero p {
+      font-size: 1.2rem;
+    }
+    /* Judul Halaman */
+    .page-title {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #003366;
+      font-weight: bold;
+    }
+    .page-title::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 4px;
+      background-color: #ffc107;
+      margin: 0.5rem auto 0;
+      border-radius: 5px;
+    }
+    /* Card Konten */
+    .content-card {
+      background: white;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      animation: fadeIn 1s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
   </style>
 </head>
 <body>
@@ -35,7 +121,7 @@
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
           <li class="nav-item dropdown">
-            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">Profil</a>
+            <a class="nav-link" href="#">Profil</a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="sejarah.html">Sejarah</a></li>
               <li><a class="dropdown-item" href="visi-misi.html">Visi & Misi</a></li>
@@ -43,13 +129,13 @@
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">Dosen</a>
+            <a class="nav-link" href="#">Dosen</a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="dosen-tetap.html">Dosen Tetap</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">Program Studi</a>
+            <a class="nav-link" href="#">Program Studi</a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="s1-teologi.html">S1 Sarjana Teologi</a></li>
               <li><a class="dropdown-item" href="s1-pendidikan.html">S1 Sarjana Pendidikan Kristen</a></li>
@@ -57,14 +143,14 @@
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">PMB</a>
+            <a class="nav-link" href="#">PMB</a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="pendaftaran.html">Pendaftaran</a></li>
               <li><a class="dropdown-item" href="informasi-pmb.html">Informasi PMB</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">Penelitian</a>
+            <a class="nav-link" href="#">Penelitian</a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="lppm.html">LPPM</a></li>
             </ul>
@@ -74,14 +160,40 @@
     </div>
   </nav>
 
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1><i class="fa-solid fa-graduation-cap"></i> S1 Sarjana Teologi</h1>
+      <p>Membangun Pemimpin Rohani dengan Landasan Firman Tuhan</p>
+    </div>
+  </section>
+
   <div class="container py-5">
-    <h1>S1 Sarjana Teologi</h1><p>Informasi program studi S1 Teologi...</p>
+    <h2 class="page-title">Tentang Program Studi</h2>
+    <div class="content-card">
+      <p>
+        Program Studi S1 Teologi di STT Skriptura Indonesia bertujuan untuk membekali mahasiswa dengan
+        pengetahuan teologis yang mendalam, keterampilan pelayanan, serta karakter Kristiani yang kuat.
+        Mahasiswa akan mempelajari berbagai mata kuliah seperti Teologi Sistematika, Biblika, Etika Kristen,
+        Sejarah Gereja, dan Homiletika.
+      </p>
+      <p>
+        Lulusan program ini dipersiapkan untuk menjadi pemimpin rohani, pengajar, peneliti, dan pelayan
+        yang mampu menjawab tantangan zaman dengan berlandaskan Firman Tuhan.
+      </p>
+      <p>
+        <strong>Durasi Studi:</strong> 4 tahun (8 semester)<br>
+        <strong>Gelar yang Diperoleh:</strong> S.Th (Sarjana Teologi)
+      </p>
+    </div>
   </div>
 
   <footer class="text-white py-4">
     <div class="container text-center">
       <p class="mb-1">&copy; 2025 STT Skriptura Indonesia</p>
-      <small><i class="fa-solid fa-location-dot"></i> Jl. Siliwangi Dalam No. 27, Depok Lama –  <i class="fa-solid fa-phone"></i> (021) 77202982 <i class="fa-solid fa-envelope"></i> stt.skripturadepok@gmail.com</small>
+      <small><i class="fa-solid fa-location-dot"></i> Jl. Siliwangi Dalam No. 27, Depok Lama – 
+        <i class="fa-solid fa-phone"></i> (021) 77202982 
+        <i class="fa-solid fa-envelope"></i> stt.skripturadepok@gmail.com</small>
       <div class="mt-2">
         <a href="https://www.facebook.com/stt.skriptura/"><i class="fab fa-facebook"></i></a>
         <a href="https://www.instagram.com/sttskriptura/"><i class="fab fa-instagram"></i></a>
