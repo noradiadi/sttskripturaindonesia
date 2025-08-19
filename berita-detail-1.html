@@ -10,67 +10,48 @@
   <style>
     body { font-family: 'Roboto', sans-serif; background-color: #f8f9fa; }
     footer { background: linear-gradient(90deg, #003366, #000); }
-    footer a { color: #ffc107; text-decoration: none; margin: 0 5px; }
+    footer a { color: #ffc107; margin: 0 5px; }
     footer a:hover { color: white; }
 
-    /* Hero Section */
+    /* Hero */
     .hero {
       background: url('hero-berita.jpg') center/cover no-repeat;
       height: 250px;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
+      display: flex; align-items: center; justify-content: center;
+      color: white; text-align: center; position: relative;
     }
     .hero::after {
-      content: "";
-      position: absolute; inset: 0;
-      background: rgba(0,0,0,0.5);
+      content: ""; position: absolute; inset: 0; background: rgba(0,0,0,0.5);
     }
     .hero h1 { position: relative; z-index: 2; }
 
-    /* Konten Utama */
+    /* Card konten */
     .content-card {
-      background: white;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      margin-top: -60px;
+      background: white; padding: 2rem; border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-top: -60px;
     }
 
     /* Sidebar */
     .sidebar {
-      background: white;
-      padding: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      margin-top: -60px;
+      background: white; padding: 1.5rem; border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-top: -60px;
     }
     .sidebar h5 {
-      border-bottom: 2px solid #0d6efd;
-      padding-bottom: 6px;
-      margin-bottom: 15px;
+      border-bottom: 2px solid #0d6efd; padding-bottom: 5px; margin-bottom: 10px;
     }
 
-    /* Back to Top */
+    /* Back to top */
     #backToTop {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #0d6efd;
-      color: white;
-      border: none;
-      border-radius: 50%;
+      position: fixed; bottom: 20px; right: 20px;
+      background: #0d6efd; color: white;
+      border: none; border-radius: 50%;
       width: 45px; height: 45px;
-      display: none;
-      align-items: center;
-      justify-content: center;
+      display: none; align-items: center; justify-content: center;
     }
   </style>
 </head>
 <body>
-  <!-- Navbar (tetap sama dengan aslinya) -->
+  <!-- Navbar asli (tidak diubah) -->
   <nav class="navbar navbar-expand-lg navbar-dark shadow-sm" style="background: linear-gradient(90deg, #0d6efd, #003366);">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center" href="index.html">
@@ -100,7 +81,7 @@
             <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">Program Studi</a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="s1-teologi.html">S1 Sarjana Teologi</a></li>
-              <li><a class="dropdown-item" href="s1-pendidikan.html">S1 Pendidikan Kristen</a></li>
+              <li><a class="dropdown-item" href="s1-pendidikan.html">S1 Sarjana Pendidikan Kristen</a></li>
               <li><a class="dropdown-item" href="s2-teologi.html">S2 Magister Teologi</a></li>
             </ul>
           </li>
@@ -122,15 +103,15 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <div class="hero text-center">
+  <!-- Hero -->
+  <div class="hero">
     <h1>Judul Berita 1</h1>
   </div>
 
   <!-- Konten -->
   <div class="container my-5">
     <div class="row g-4">
-      <!-- Konten Utama -->
+      <!-- Artikel -->
       <div class="col-lg-8">
         <div class="content-card">
           <nav aria-label="breadcrumb">
@@ -140,8 +121,8 @@
               <li class="breadcrumb-item active">Judul Berita 1</li>
             </ol>
           </nav>
-          <p>Isi berita detail pertama... konten panjang bisa ditulis di sini agar lebih menarik dan mudah dibaca.</p>
-          <!-- Share -->
+          <p>Isi berita detail pertama... konten panjang bisa ditulis di sini agar lebih menarik.</p>
+          <!-- Tombol share -->
           <div class="mt-4">
             <strong>Bagikan:</strong>
             <a href="#"><i class="fab fa-facebook mx-2"></i></a>
@@ -172,9 +153,11 @@
   <footer class="text-white py-4">
     <div class="container text-center">
       <p class="mb-1">&copy; 2025 STT Skriptura Indonesia</p>
-      <small><i class="fa-solid fa-location-dot"></i> Jl. Siliwangi Dalam No. 27, Depok Lama –  
-      <i class="fa-solid fa-phone"></i> (021) 77202982  
-      <i class="fa-solid fa-envelope"></i> stt.skripturadepok@gmail.com</small>
+      <small>
+        <i class="fa-solid fa-location-dot"></i> Jl. Siliwangi Dalam No. 27, Depok Lama – 
+        <i class="fa-solid fa-phone"></i> (021) 77202982 
+        <i class="fa-solid fa-envelope"></i> stt.skripturadepok@gmail.com
+      </small>
       <div class="mt-2">
         <a href="https://www.facebook.com/stt.skriptura/"><i class="fab fa-facebook"></i></a>
         <a href="https://www.instagram.com/sttskriptura/"><i class="fab fa-instagram"></i></a>
