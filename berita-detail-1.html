@@ -3,76 +3,133 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hasil Pencarian</title>
+  <title>Berita Detail 1</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <style>
-    body { background: #f8f9fa; font-family: 'Roboto', sans-serif; }
-    .search-results { margin-top: 50px; }
-    .result-card { background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); margin-bottom: 20px; transition: 0.3s; }
-    .result-card:hover { transform: translateY(-3px); box-shadow: 0 6px 16px rgba(0,0,0,0.12); }
-    .result-card img { width: 180px; height: 120px; object-fit: cover; border-radius: 12px 0 0 12px; }
-    .result-card .card-body { padding: 1rem; }
-    .result-title { font-size: 18px; font-weight: bold; color: #0d6efd; text-decoration: none; }
-    .result-title:hover { text-decoration: underline; }
+    body { font-family: 'Roboto', sans-serif; background: #f8f9fa; }
+    .navbar { background: linear-gradient(90deg, #0d6efd, #003366); }
+    .navbar-brand { font-weight: bold; letter-spacing: 1px; }
+    .navbar-nav .nav-link:hover { color: #ffc107; }
+
+    /* Hero */
+    .hero {
+      background: url('hero-berita.jpg') center/cover no-repeat;
+      height: 250px; position: relative; display: flex; align-items: center; justify-content: center;
+      color: white; text-align: center;
+    }
+    .hero::after { content:""; position:absolute; inset:0; background:rgba(0,0,0,.5); }
+    .hero h1 { position:relative; z-index:2; }
+
+    /* Konten */
+    .content-card {
+      background:white; padding:2rem; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,.1);
+      margin-top:-60px;
+    }
+
+    /* Sidebar */
+    .sidebar { background:white; padding:1.5rem; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,.1); }
+    .sidebar h5 { border-bottom:2px solid #0d6efd; padding-bottom:5px; margin-bottom:10px; }
+
+    /* Back to top */
+    #backToTop {
+      position:fixed; bottom:20px; right:20px; background:#0d6efd; color:white;
+      border:none; border-radius:50%; width:45px; height:45px; display:none;
+      align-items:center; justify-content:center;
+    }
+
+    footer { background: linear-gradient(90deg, #003366, #000); }
+    footer a { color:#ffc107; margin:0 5px; }
+    footer a:hover { color:white; }
   </style>
 </head>
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">STT Skriptura Indonesia</a>
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="logo.png" alt="Logo" height="40" class="me-2"> STT Skriptura Indonesia
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="berita.html">Berita</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
 
-  <!-- Hasil Pencarian -->
-  <div class="container search-results">
-    <h3>🔍 Hasil Pencarian: <span id="searchQuery"></span></h3>
-    <p class="text-muted">Menampilkan hasil pencarian berita berdasarkan kata kunci Anda.</p>
+  <!-- Hero -->
+  <div class="hero">
+    <h1>Judul Berita 1</h1>
+  </div>
 
-    <div id="results">
-      <!-- Hasil pencarian akan tampil di sini -->
+  <!-- Konten -->
+  <div class="container my-5">
+    <div class="row g-4">
+      <!-- Artikel -->
+      <div class="col-lg-8">
+        <div class="content-card">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html">Beranda</a></li>
+              <li class="breadcrumb-item"><a href="berita.html">Berita</a></li>
+              <li class="breadcrumb-item active">Judul Berita 1</li>
+            </ol>
+          </nav>
+          <p>Isi berita detail pertama... konten panjang bisa ditulis di sini.</p>
+          <div class="mt-4">
+            <strong>Bagikan:</strong>
+            <a href="#"><i class="fab fa-facebook mx-2"></i></a>
+            <a href="#"><i class="fab fa-twitter mx-2"></i></a>
+            <a href="#"><i class="fab fa-whatsapp mx-2"></i></a>
+          </div>
+        </div>
+      </div>
+      <!-- Sidebar -->
+      <div class="col-lg-4">
+        <div class="sidebar">
+          <h5>Berita Terbaru</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Judul Berita 2</a></li>
+            <li><a href="#">Judul Berita 3</a></li>
+          </ul>
+          <h5>Berita Populer</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Judul Populer 1</a></li>
+            <li><a href="#">Judul Populer 2</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 
   <!-- Footer -->
-  <footer class="text-center text-white py-3 mt-5" style="background: linear-gradient(90deg,#003366,#000);">
-    <small>&copy; 2025 STT Skriptura Indonesia</small>
+  <footer class="text-white py-4">
+    <div class="container text-center">
+      <p class="mb-1">&copy; 2025 STT Skriptura Indonesia</p>
+      <small><i class="fa-solid fa-location-dot"></i> Jl. Siliwangi Dalam No. 27, Depok Lama –  
+      <i class="fa-solid fa-phone"></i> (021) 77202982  
+      <i class="fa-solid fa-envelope"></i> stt.skripturadepok@gmail.com</small>
+      <div class="mt-2">
+        <a href="https://www.facebook.com/stt.skriptura/"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/sttskriptura/"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@STTSKRIPTURAdepok"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
   </footer>
 
+  <!-- Back to top -->
+  <button id="backToTop"><i class="fa fa-arrow-up"></i></button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    // Ambil query dari URL
-    const urlParams = new URLSearchParams(window.location.search);
-    const query = urlParams.get("q") || "";
-    document.getElementById("searchQuery").innerText = query;
-
-    // Data berita (dummy - bisa diganti database)
-    const berita = [
-      {judul: "Judul Berita 1", deskripsi: "Isi singkat berita 1", img: "thumb1.jpg", link: "berita-detail-1.html"},
-      {judul: "Judul Berita 2", deskripsi: "Isi singkat berita 2", img: "thumb2.jpg", link: "berita-detail-2.html"},
-      {judul: "Wisuda Mahasiswa Teologi", deskripsi: "Laporan acara wisuda STT Skriptura", img: "thumb3.jpg", link: "berita-detail-3.html"},
-      {judul: "Seminar Pendidikan Kristen", deskripsi: "Seminar pendidikan dan pengajaran Kristen", img: "thumb4.jpg", link: "berita-detail-4.html"}
-    ];
-
-    // Filter hasil
-    const results = berita.filter(b => b.judul.toLowerCase().includes(query.toLowerCase()));
-
-    const resultsContainer = document.getElementById("results");
-    if (results.length > 0) {
-      results.forEach(b => {
-        resultsContainer.innerHTML += `
-          <div class="result-card d-flex">
-            <img src="${b.img}" alt="${b.judul}">
-            <div class="card-body">
-              <a href="${b.link}" class="result-title">${b.judul}</a>
-              <p class="text-muted mb-0">${b.deskripsi}</p>
-            </div>
-          </div>
-        `;
-      });
-    } else {
-      resultsContainer.innerHTML = `<p class="text-danger">Tidak ada berita yang cocok dengan kata kunci "<b>${query}</b>".</p>`;
-    }
+    const btn = document.getElementById("backToTop");
+    window.onscroll = () => { btn.style.display = window.scrollY > 200 ? "flex" : "none"; };
+    btn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
   </script>
 </body>
 </html>
