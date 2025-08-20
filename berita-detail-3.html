@@ -20,7 +20,10 @@
     footer a { color: #ffc107; text-decoration: none; margin: 0 5px; }
     footer a:hover { color: white; }
     .navbar .dropdown:hover .dropdown-menu { display: block; margin-top: 0; }
-  </style>
+  
+    .card { transition: transform 0.3s ease-in-out; }
+    .card:hover { transform: translateY(-5px); }
+    </style>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
@@ -74,9 +77,68 @@
     </div>
   </nav>
 
-  <div class="container py-5">
-    <h1>Judul Berita 3</h1><p>Isi berita detail ketiga...</p>
+  
+  <!-- Hero Banner -->
+  <div class="bg-dark text-white text-center py-5 mb-4" style="background: url('gambar-berita3.jpg') center/cover no-repeat;">
+    <div class="bg-dark bg-opacity-50 p-5 rounded">
+      <h1 class="display-5 fw-bold">Judul Berita 3</h1>
+      <p class="lead">Dipublikasikan: 22 Agustus 2025</p>
+    </div>
   </div>
+
+  <!-- Konten Berita -->
+  <div class="container mb-5">
+    <div class="card shadow-lg border-0 rounded-3">
+      <div class="card-body p-4">
+        <p class="lead">Isi berita detail ketiga...</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tincidunt, nisl vel luctus pharetra, augue lorem ullamcorper nulla, vitae tempus nulla justo ut nisi.</p>
+        <p>Praesent nec libero at est tristique malesuada. Cras ac nibh sed urna pretium facilisis. Donec vel ligula sit amet nibh viverra congue.</p>
+
+        <hr class="my-4">
+
+        <!-- Tombol share -->
+        <div class="mb-4">
+          <h5>Bagikan:</h5>
+          <a href="#" class="btn btn-primary btn-sm me-2"><i class="fab fa-facebook-f"></i> Facebook</a>
+          <a href="#" class="btn btn-success btn-sm me-2"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+          <a href="#" class="btn btn-info btn-sm text-white"><i class="fab fa-twitter"></i> Twitter</a>
+        </div>
+
+        <!-- Berita Terkait -->
+        <div class="mt-5">
+          <h4 class="mb-3">Berita Terkait</h4>
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="card h-100 shadow-sm">
+                <img src="gambar-berita1.jpg" class="card-img-top" alt="Berita Terkait 1">
+                <div class="card-body">
+                  <h6 class="card-title">Judul Berita 1</h6>
+                  <a href="berita-detail-1.html" class="btn btn-outline-primary btn-sm">Baca Selengkapnya</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="card h-100 shadow-sm">
+                <img src="gambar-berita2.jpg" class="card-img-top" alt="Berita Terkait 2">
+                <div class="card-body">
+                  <h6 class="card-title">Judul Berita 2</h6>
+                  <a href="berita-detail-2.html" class="btn btn-outline-primary btn-sm">Baca Selengkapnya</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tombol kembali -->
+        <div class="mt-4">
+          <a href="index.html#berita" class="btn btn-secondary">
+            <i class="fa fa-arrow-left"></i> Kembali ke Berita
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <footer class="text-white py-4">
     <div class="container text-center">
