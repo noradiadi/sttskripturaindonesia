@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Berita Detail </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Roboto', sans-serif; background-color: #f8f9fa; }
+    .navbar { background: linear-gradient(90deg, #0d6efd, #003366); }
+    .navbar-brand { font-weight: bold; letter-spacing: 1px; }
+    .navbar-nav .nav-link { transition: 0.3s; }
+    .navbar-nav .nav-link:hover { color: #ffc107; }
+    .dropdown-menu { background-color: #003366; }
+    .dropdown-menu .dropdown-item { color: white; }
+    .dropdown-menu .dropdown-item:hover { background-color: #0d6efd; }
+    footer { background: linear-gradient(90deg, #003366, #000); }
+    footer a { color: #ffc107; text-decoration: none; margin: 0 5px; }
+    footer a:hover { color: white; }
+    .navbar .dropdown:hover .dropdown-menu { display: block; margin-top: 0; }
+  
+    .card { transition: transform 0.3s ease-in-out; }
+    .card:hover { transform: translateY(-5px); }
+    </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="logo.png" alt="Logo" height="40" class="me-2"> STT Skriptura Indonesia
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">Profil</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="sejarah.html">Sejarah</a></li>
+              <li><a class="dropdown-item" href="visi-misi.html">Visi & Misi</a></li>
+              <li><a class="dropdown-item" href="struktur-organisasi.html">Struktur Organisasi</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">Dosen</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="dosen-tetap.html">Dosen</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">Program Studi</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="s1-teologi.html">S1 Sarjana Teologi</a></li>
+              <li><a class="dropdown-item" href="s1-pendidikan.html">S1 Sarjana Pendidikan Kristen</a></li>
+              <li><a class="dropdown-item" href="s2-teologi.html">S2 Magister Teologi</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">PMB</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="pendaftaran.html">Pendaftaran</a></li>
+              <li><a class="dropdown-item" href="informasi-pmb.html">Informasi PMB</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">Penelitian</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="lppm.html">LPPM</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  
+  <!-- Hero Banner -->
+  <div class="bg-dark text-white text-center py-5 mb-4" style="background: url('Gambar.JPG') center/cover no-repeat;">
+    <div class="bg-dark bg-opacity-50 p-5 rounded">
+      <h1 class="display-5 fw-bold">Wisuda STT Sriptura Ke IX  </h1>
+      <p class="lead">Dipublikasikan: 23 Agustus 2025</p>
+    </div>
+  </div>
+
+  <!-- Konten Berita -->
+  <div class="container mb-5">
+    <div class="card shadow-lg border-0 rounded-3">
+      <div class="card-body p-4">
+        <p class="lead">Isi berita detail pertama...</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut lorem vitae odio bibendum malesuada. Integer non lorem a libero tincidunt suscipit. Nullam ut dui eros. Morbi vitae mi ut arcu eleifend vulputate.</p>
+        <p>Sed a felis eros. Nulla facilisi. Aliquam erat volutpat. Nam sit amet gravida magna. Integer feugiat diam nec urna suscipit bibendum.</p>
+        
+        <hr class="my-4">
+
+        <!-- Tombol share -->
+        <div class="mb-4">
+          <h5>Bagikan:</h5>
+          <a href="https://www.facebook.com/stt.skriptura/" class="btn btn-primary btn-sm me-2"><i class="fab fa-facebook-f"></i> Facebook</a>
+          <a href="https://wa.me/+62 813-8560-4219/" class="btn btn-success btn-sm me-2"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        </div>
+
+        <!-- Berita Terkait -->
+        <div class="mt-5">
+          <h4 class="mb-3">Berita Terkait</h4>
+          <div class="row">
+             <div class="col-md-4 mb-3">
+              <div class="card h-100 shadow-sm">
+                <img src="gambar-berita1.jpg" class="card-img-top" alt="Berita Terkait ">
+                <div class="card-body">
+                  <h6 class="card-title">Judul Berita 1</h6>
+                  <a href="berita-detail-1.html" class="btn btn-outline-primary btn-sm">Baca Selengkapnya</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="card h-100 shadow-sm">
+                <img src="gambar-berita2.jpg" class="card-img-top" alt="Berita Terkait ">
+                <div class="card-body">
+                  <h6 class="card-title">Judul Berita 2</h6>
+                  <a href="berita-detail-2.html" class="btn btn-outline-primary btn-sm">Baca Selengkapnya</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="card h-100 shadow-sm">
+                <img src="gambar-berita3.jpg" class="card-img-top" alt="Berita Terkait ">
+                <div class="card-body">
+                  <h6 class="card-title">Judul Berita 3</h6>
+                  <a href="berita-detail-3.html" class="btn btn-outline-primary btn-sm">Baca Selengkapnya</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tombol kembali -->
+        <div class="mt-4">
+          <a href="index.html#beranda" class="btn btn-secondary">
+            <i class="fa fa-arrow-left"></i> Kembali ke Beranda
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <footer class="text-white py-4">
+    <div class="container text-center">
+      <p class="mb-1">&copy; 2025 STT Skriptura Indonesia</p>
+      <small><i class="fa-solid fa-location-dot"></i> Jl. Siliwangi Dalam No. 27, Depok Lama –  <i class="fa-solid fa-phone"></i> (021) 77202982 <i class="fa-solid fa-envelope"></i> stt.skripturadepok@gmail.com</small>
+      <div class="mt-2">
+        <a href="https://www.facebook.com/stt.skriptura/"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/sttskriptura/"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@STTSKRIPTURAdepok"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
